@@ -153,11 +153,12 @@ const BooleanFunctions = ({ pdnf, minimizedDnf }) => {
 };
 
 const KarnaughMap = ({ data }) => {
-  const { truth_table, kmap, islands, pdnf, minimized_dnf } = data;
+  const { func, truth_table, kmap, islands, pdnf, minimized_dnf } = data;
 
   return (
     <div>
       <h1>Решение</h1>
+      <h3>Введеный вектор: {func}</h3>
       <TruthTable truthTable={truth_table} />
       <h3>Карта Карно (CD↓/AB→):</h3>
       <KmapDiv>
